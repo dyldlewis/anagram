@@ -16,6 +16,7 @@
 
         function implodeAnagram($input_word)
         {
+            $input_word = strtolower($input_word);
             $letters_of_anagram = str_split($input_word);
             sort($letters_of_anagram);
             return implode("", $letters_of_anagram);
@@ -49,13 +50,10 @@
                 $array_of_letters = str_split($word);
                 sort($array_of_letters);
                 $sorted_string = implode("", $array_of_letters);
+                $sorted_string = strtolower($sorted_string);
                 array_push($words_of_anagram, $sorted_string);
             }
             return $words_of_anagram;
         }
-
     }
-
-
-
 ?>
